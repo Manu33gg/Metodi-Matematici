@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soluzioni Esercizi - Metodi Matematici per l'Informatica</title>
+    <!-- MathJax CDN per formule matematiche -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .exercise {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-left: 5px solid #2980b9;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .exercise h2 {
+            color: #2980b9;
+        }
+        .explanation {
+            color: #333;
+            margin-top: 10px;
+        }
+        .answer {
+            margin-top: 15px;
+            font-weight: bold;
+            color: #27ae60;
+        }
+        code {
+            background-color: #ecf0f1;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-size: 95%;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Soluzioni degli Esercizi - Metodi Matematici per l'Informatica</h1>
+
+<h2>Parte 1: Insiemi</h2>
+
+<div class="exercise" id="exercise1">
+    <h2>Esercizio 1 - Operazioni con Insiemi</h2>
+    <p><strong>Testo:</strong> Siano dati gli insiemi \( A = \{1, 2, 3, 4\} \), \( B = \{3, 4, 5, 6\} \) e \( C = \{5, 6, 7, 8\} \).</p>
+    <div class="explanation">
+        <p><strong>A.</strong> Calcolare \( A \cup B \).</p>
+        <p><strong>Soluzione:</strong> \( A \cup B = \{1, 2, 3, 4, 5, 6\} \).</p>
+
+        <p><strong>B.</strong> Calcolare \( A \cap B \).</p>
+        <p><strong>Soluzione:</strong> \( A \cap B = \{3, 4\} \).</p>
+
+        <p><strong>C.</strong> Calcolare \( A - C \).</p>
+        <p><strong>Soluzione:</strong> Poiché \( C = \{5, 6, 7, 8\} \) e non ha elementi in comune con \( A \), allora \( A - C = A = \{1, 2, 3, 4\} \).</p>
+
+        <p><strong>D.</strong> Calcolare \( (A \cup B) \cap C \).</p>
+        <p><strong>Soluzione:</strong> \( A \cup B = \{1,2,3,4,5,6\} \). Quindi \( (A \cup B) \cap C = \{5,6\} \).</p>
+    </div>
+</div>
+
+<div class="exercise" id="exercise2">
+    <h2>Esercizio 2 - Sottoinsiemi e Prodotti Cartesiani</h2>
+    <p><strong>Testo:</strong> Sia \( D = \{x \in \mathbb{N} \mid x \leq 3\} \).</p>
+    <div class="explanation">
+        <p><strong>A.</strong> Determinare tutti i sottoinsiemi di \( D \).</p>
+        <p><strong>Soluzione:</strong> \( D = \{1,2,3\} \). I sottoinsiemi sono:
+            \[
+            \emptyset, \{1\}, \{2\}, \{3\}, \{1,2\}, \{1,3\}, \{2,3\}, \{1,2,3\}
+            \]
+        </p>
+
+        <p><strong>B.</strong> Calcolare \( D \times D \).</p>
+        <p><strong>Soluzione:</strong> \( D \times D \) è l'insieme di tutte le coppie ordinate \((x,y)\) con \( x, y \in D \).
+            \[
+            \{(1,1),(1,2),(1,3),(2,1),(2,2),(2,3),(3,1),(3,2),(3,3)\}
+            \]
+        </p>
+    </div>
+</div>
+
+<h2>Parte 2: Relazioni</h2>
+
+<div class="exercise" id="exercise3">
+    <h2>Esercizio 3 - Proprietà delle Relazioni</h2>
+    <p><strong>Testo:</strong> Data la relazione \( R = \{(1,1),(2,2),(3,3),(1,2),(2,3)\} \) su \( A = \{1,2,3\} \), verificare se \( R \) è riflessiva, simmetrica, transitiva.</p>
+    <div class="explanation">
+        <p><strong>A.</strong> Riflessività.</p>
+        <p><strong>Verifica:</strong> Tutti gli elementi di \( A \) sono in relazione con sé stessi, poiché \( (1,1),(2,2),(3,3) \in R \). Quindi, \( R \) è riflessiva.</p>
+
+        <p><strong>B.</strong> Simmetria.</p>
+        <p><strong>Verifica:</strong> \( (1,2) \in R \), ma \( (2,1) \notin R \), quindi \( R \) non è simmetrica.</p>
+
+        <p><strong>C.</strong> Transitività.</p>
+        <p><strong>Verifica:</strong> \( (1,2) \in R \) e \( (2,3) \in R \), quindi per la transitività dovrebbe essere \( (1,3) \in R \), ma \( (1,3) \notin R \). Quindi, \( R \) non è transitiva.</p>
+    </div>
+</div>
+
+<div class="exercise" id="exercise4">
+    <h2>Esercizio 4 - Chiusura Riflessiva e Simmetrica</h2>
+    <p><strong>Testo:</strong> Data la relazione \( S = \{(1,2),(2,3)\} \) su \( A = \{1,2,3\} \), determinare la chiusura riflessiva e la chiusura simmetrica di \( S \).</p>
+    <div class="explanation">
+        <p><strong>A.</strong> Chiusura riflessiva di \( S \).</p>
+        <p><strong>Soluzione:</strong> Aggiungiamo le coppie \( (1,1),(2,2),(3,3) \). Quindi, la chiusura riflessiva è \( S_r = S \cup \{(1,1),(2,2),(3,3)\} \).</p>
+
+        <p><strong>B.</strong> Chiusura simmetrica di \( S \).</p>
+        <p><strong>Soluzione:</strong> Aggiungiamo le coppie inverse \( (2,1),(3,2) \). Quindi, la chiusura simmetrica è \( S_s = S \cup \{(2,1),(3,2)\} \).</p>
+    </div>
+</div>
+
+<h2>Parte 3: Funzioni</h2>
+
+<div class="exercise" id="exercise5">
+    <h2>Esercizio 5 - Funzioni Iniettive, Suriettive e Biiettive</h2>
+    <p><strong>Testo:</strong> Siano \( f: \mathbb{R} \rightarrow \mathbb{R} \) definita da \( f(x) = 2x + 1 \) e \( g: \mathbb{R} \rightarrow \mathbb{R} \) definita da \( g(x) = x^2 \).</p>
+    <div class="explanation">
+        <p><strong>A.</strong> La funzione \( f \) è iniettiva?</p>
+        <p><strong>Soluzione:</strong> Sì, perché se \( f(x_1) = f(x_2) \) allora \( 2x_1 + 1 = 2x_2 + 1 \) implica \( x_1 = x_2 \).</p>
+
+        <p><strong>B.</strong> La funzione \( f \) è suriettiva?</p>
+        <p><strong>Soluzione:</strong> Sì, per ogni \( y \in \mathbb{R} \) esiste \( x = \frac{y - 1}{2} \) tale che \( f(x) = y \).</p>
+
+        <p><strong>C.</strong> La funzione \( g \) è iniettiva?</p>
+        <p><strong>Soluzione:</strong> No, perché \( g(-x) = g(x) \) per ogni \( x \in \mathbb{R} \).</p>
+
+        <p><strong>D.</strong> La funzione \( g \) è suriettiva?</p>
+        <p><strong>Soluzione:</strong> No, l'immagine di \( g \) è \( [0, +\infty) \), quindi non copre tutti i reali.</p>
+    </div>
+</div>
+
+<div class="exercise" id="exercise6">
+    <h2>Esercizio 6 - Composizione di Funzioni</h2>
+    <p><strong>Testo:</strong> Siano \( f: \mathbb{R} \rightarrow \mathbb{R} \) definita da \( f(x) = x + 3 \) e \( h: \mathbb{R} \rightarrow \mathbb{R} \) definita da \( h(x) = 2x \).</p>
+    <div class="explanation">
+        <p><strong>A.</strong> Calcolare \( (h \circ f)(x) \).</p>
+        <p><strong>Soluzione:</strong> \( h(f(x)) = h(x + 3) = 2(x + 3) = 2x + 6 \).</p>
+
+        <p><strong>B.</strong> Calcolare \( (f \circ h)(x) \).</p>
+        <p><strong>Soluzione:</strong> \( f(h(x)) = f(2x) = 2x + 3 \).</p>
+
+        <p><strong>C.</strong> Le funzioni \( h \circ f \) e \( f \circ h \) sono uguali?</p>
+        <p><strong>Soluzione:</strong> No, poiché \( 2x + 6 \neq 2x + 3 \) in generale.</p>
+    </div>
+</div>
+
+<h2>Parte 4: Cardinalità</h2>
+
+<div class="exercise" id="exercise7">
+    <h2>Esercizio 7 - Insiemi Numerabili e Non Numerabili</h2>
+    <div class="explanation">
+        <p><strong>A.</strong> Dimostrare che l'insieme dei numeri naturali pari è numerabile.</p>
+        <p><strong>Soluzione:</strong> Definiamo la funzione \( f: \mathbb{N} \rightarrow 2\mathbb{N} \) con \( f(n) = 2n \). Questa è una biiezione tra \( \mathbb{N} \) e \( 2\mathbb{N} \), quindi l'insieme dei numeri pari è numerabile.</p>
+
+        <p><strong>B.</strong> Dimostrare che l'insieme \( (0,1) \subset \mathbb{R} \) non è numerabile.</p>
+        <p><strong>Soluzione:</strong> Si utilizza l'argomento diagonale di Cantor per mostrare che non può esserci una biiezione tra \( \mathbb{N} \) e gli elementi di \( (0,1) \), quindi l'insieme non è numerabile.</p>
+    </div>
+</div>
+
+<div class="exercise" id="exercise8">
+    <h2>Esercizio 8 - Cardinalità del Prodotto Cartesiano</h2>
+    <p><strong>Testo:</strong> Siano \( A \) e \( B \) due insiemi numerabili. Dimostrare che \( A \times B \) è numerabile.</p>
+    <div class="explanation">
+        <p><strong>Soluzione:</strong> Poiché \( A \) e \( B \) sono numerabili, esistono biiezioni \( f: \mathbb{N} \rightarrow A \) e \( g: \mathbb{N} \rightarrow B \). Possiamo definire una funzione \( h: \mathbb{N} \times \mathbb{N} \rightarrow A \times B \) con \( h(m,n) = (f(m),g(n)) \). Poiché \( \mathbb{N} \times \mathbb{N} \) è numerabile (ad esempio, enumerando le coppie con il metodo dei numeri triangolari), segue che \( A \times B \) è numerabile.</p>
+    </div>
+</div>
+
+<h2>Parte 5: Induzione Matematica</h2>
+
+<div class="exercise" id="exercise9">
+    <h2>Esercizio 9 - Somma dei Numeri Pari</h2>
+    <p><strong>Testo:</strong> Dimostrare che per ogni \( n \geq 1 \):
+        \[
+        \sum_{k=1}^{n} 2k = n(n+1)
+        \]
+    </p>
+    <div class="explanation">
+        <p><strong>Dimostrazione per induzione:</strong></p>
+        <p><strong>Base:</strong> Per \( n = 1 \):
+            \[
+            \sum_{k=1}^{1} 2k = 2 = 1(1+1) = 2
+            \]
+            Quindi, vera per \( n = 1 \).
+        </p>
+
+        <p><strong>Passo Induttivo:</strong> Supponiamo vera per \( n \), cioè:
+            \[
+            \sum_{k=1}^{n} 2k = n(n+1)
+            \]
+            Dimostriamo per \( n+1 \):
+            \[
+            \sum_{k=1}^{n+1} 2k = \left( \sum_{k=1}^{n} 2k \right) + 2(n+1) = n(n+1) + 2(n+1) = (n+1)(n + 2)
+            \]
+            Quindi, l'asserzione è vera per \( n+1 \).
+        </p>
+    </div>
+</div>
+
+<div class="exercise" id="exercise10">
+    <h2>Esercizio 10 - Disuguaglianza per Induzione</h2>
+    <p><strong>Testo:</strong> Dimostrare che per ogni \( n \geq 4 \), \( 2^n > n^2 \).</p>
+    <div class="explanation">
+        <p><strong>Dimostrazione per induzione:</strong></p>
+        <p><strong>Base:</strong> Per \( n = 4 \):
+            \[
+            2^4 = 16 > 4^2 = 16
+            \]
+            In questo caso, \( 16 = 16 \), quindi consideriamo \( n = 5 \):
+            \[
+            2^5 = 32 > 5^2 = 25
+            \]
+            Quindi vera per \( n = 5 \).
+        </p>
+
+        <p><strong>Passo Induttivo:</strong> Supponiamo vera per \( n \geq 5 \), cioè \( 2^n > n^2 \). Dimostriamo per \( n+1 \):
+            \[
+            2^{n+1} = 2 \cdot 2^n > 2 \cdot n^2
+            \]
+            Poiché \( n \geq 5 \), abbiamo \( 2n^2 > (n+1)^2 \) (verificabile per \( n \geq 5 \)). Quindi:
+            \[
+            2^{n+1} > (n+1)^2
+            \]
+            L'asserzione è quindi vera per \( n+1 \).
+        </p>
+    </div>
+</div>
+
+</body>
+</html>

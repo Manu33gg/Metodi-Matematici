@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soluzioni Esercizi - Metodi Matematici</title>
+    <!-- MathJax CDN per formule matematiche -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .exercise {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .exercise h2 {
+            color: #333;
+        }
+        .explanation {
+            color: #555;
+            margin-top: 10px;
+        }
+        .answer {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Soluzioni degli Esercizi - Metodi Matematici per l'Informatica</h1>
+
+<div class="exercise" id="exercise1">
+    <h2>Esercizio 1 - Proprietà degli Insiemi</h2>
+    <p><strong>Testo:</strong> Per ogni tripla di insiemi \( A \), \( B \) e \( C \) tali che \( A - B = C \).</p>
+    <div class="explanation">
+        <p><strong>A.</strong> Se \( A \cap B \neq \emptyset \) allora \( C \subset A \): Vero, perché \( C \) è definito come \( A - B \), quindi \( C \) contiene solo elementi di \( A \) che non sono in \( B \). <strong>Motivazione:</strong> Questa definizione implica che \( C \subset A \) poiché ogni elemento di \( C \) appartiene necessariamente ad \( A \) ma non a \( B \).</p>
+        <p><strong>B.</strong> \( C \cup (B - A) = A \cup B \): Vero. <strong>Motivazione:</strong> L'insieme \( C = A - B \) rappresenta gli elementi di \( A \) che non sono in \( B \), mentre \( B - A \) sono gli elementi di \( B \) che non sono in \( A \). L'unione di \( C \) e \( B - A \) copre tutti gli elementi di \( A \) e \( B \), ovvero \( A \cup B \).</p>
+    </div>
+</div>
+
+<div class="exercise" id="exercise2">
+    <h2>Esercizio 2 - Funzioni e Sottoinsiemi</h2>
+    <p><strong>Testo:</strong> Dato un insieme \( X \), indichiamo con \( 2^X \) l'insieme delle parti di \( X \).</p>
+    <div class="explanation">
+        <p><strong>A.</strong> Una funzione iniettiva da \( A \) in \( B \) è un sottoinsieme di \( A \times B \): Vero. <strong>Motivazione:</strong> Una funzione iniettiva da \( A \) in \( B \) associa ad ogni elemento di \( A \) uno e un solo elemento di \( B \). Questo corrisponde ad una selezione di coppie \( (a, b) \in A \times B \), che è un sottoinsieme di \( A \times B \).</p>
+        <p><strong>B.</strong> L’insieme di tutte le funzioni da \( A \) in \( B \) è un sottoinsieme di \( 2^{A \times B} \): Vero. <strong>Motivazione:</strong> Ogni funzione è un insieme di coppie \( (a, b) \) tale che ogni \( a \in A \) sia associato a un solo \( b \in B \). Poiché l'insieme delle parti di \( A \times B \) contiene tutti i possibili sottoinsiemi di \( A \times B \), anche l'insieme delle funzioni da \( A \) in \( B \) è contenuto in \( 2^{A \times B} \).</p>
+    </div>
+</div>
+
+<div class="exercise" id="exercise3">
+    <h2>Esercizio 3 - Somma di una Progressione Geometrica</h2>
+    <p><strong>Testo:</strong> Dimostrare che per ogni \( n \geq 2 \) si ha \( \sum_{k=0}^{n-1} x^k = \frac{1 - x^n}{1 - x} \), dove \( x \) è un numero reale.</p>
+    <div class="explanation">
+        <p><strong>Dimostrazione:</strong> La formula rappresenta la somma di una progressione geometrica finita. Si dimostra moltiplicando entrambi i membri per \( 1 - x \) e verificando che i termini si semplificano, lasciando solo \( 1 - x^n \) al numeratore.</p>
+    </div>
+</div>
+
+<div class="exercise" id="exercise4">
+    <h2>Esercizio 4 - Numerabilità</h2>
+    <div class="explanation">
+        <p><strong>Definizione:</strong> Un insieme è numerabile se è finito o se i suoi elementi possono essere messi in corrispondenza biunivoca con i numeri naturali \( \mathbb{N} \). <strong>Esempio:</strong> L’insieme dei numeri pari è numerabile poiché esiste una biiezione con \( \mathbb{N} \) data da \( f(n) = 2n \).</p>
+    </div>
+</div>
+
+<div class="exercise" id="exercise5">
+    <h2>Esercizio 5 - Interpretazione nella Logica Predicativa</h2>
+    <div class="explanation">
+        <p><strong>Definizione:</strong> Un'interpretazione nella logica predicativa assegna significati specifici ai simboli di costante, relazione e funzione in un dominio. Definisce come i predicati e le funzioni operano sugli elementi del dominio.</p>
+    </div>
+</div>
+
+<div class="exercise" id="exercise6">
+    <h2>Esercizio 6 - Logica Proposizionale</h2>
+    <div class="explanation">
+        <p><strong>A.</strong> Se \( A \models B \lor C \) e \( B \models \neg C \), allora \( (A \rightarrow C) \models \neg B \): Vero. <strong>Motivazione:</strong> Poiché \( B \) e \( C \) sono mutuamente esclusivi, se \( A \) implica \( C \), allora \( B \) non può essere vero, quindi \( \neg B \) deve essere valido.</p>
+        <p><strong>B.</strong> Se \( A \land \neg B \) è soddisfacibile, allora \( A \rightarrow B \) è insoddisfacibile: Falso. <strong>Motivazione:</strong> La soddisfacibilità di \( A \land \neg B \) non implica che \( A \rightarrow B \) sia insoddisfacibile, poiché \( A \rightarrow B \) potrebbe non essere sempre verificato.</p>
+    </div>
+</div>
+
+<div class="exercise" id="exercise7">
+    <h2>Esercizio 7 - Tautologia</h2>
+    <p><strong>Testo:</strong> L’enunciato seguente è una tautologia? \( \exists x(A(x) \rightarrow \neg B(x)) \rightarrow \neg \forall x(B(x) \rightarrow A(x)) \)</p>
+    <div class="explanation">
+        <p><strong>Risposta:</strong> Vero. <strong>Motivazione:</strong> L’affermazione è una tautologia perché l'esistenza di un elemento per cui \( A(x) \rightarrow \neg B(x) \) implica che non tutti gli elementi soddisfano \( B(x) \rightarrow A(x) \).</p>
+    </div>
+</div>
+
+<div class="exercise" id="exercise8">
+    <h2>Esercizio 8 - Linguaggio Predicativo</h2>
+    <p><strong>Testo:</strong> Formalizzare la proposizione "Ogni insieme \( X \) è sottoinsieme di un qualche insieme \( Y \)" utilizzando il simbolo \( \in \).</p>
+    <div class="explanation">
+        <p><strong>Risposta:</strong> \( \forall X \exists Y \forall z (z \in X \rightarrow z \in Y) \). Questa affermazione formalizza che ogni elemento \( z \) appartenente a \( X \) appartiene anche a \( Y \).</p>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soluzioni Esercizi - Metodi Matematici</title>
+    <!-- MathJax CDN per formule matematiche -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .exercise {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .exercise h2 {
+            color: #333;
+        }
+        .explanation {
+            color: #555;
+            margin-top: 10px;
+        }
+        .answer {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Soluzioni degli Esercizi - Metodi Matematici per l'Informatica</h1>
+
+<div class="exercise" id="exercise1">
+    <h2>Esercizio 1 - Relazioni d'Ordine</h2>
+    <div class="explanation">
+        <p><strong>Definizione:</strong> Una relazione d'ordine <em>stretto</em> su un insieme \( A \) è una relazione \( R \) che è antisimmetrica e transitiva, ma non riflessiva. Un esempio è la relazione "<" su \( \mathbb{N} \), dove, per esempio, \( 3 < 5 \), ma non \( 3 \leq 3 \).</p>
+        <p>Una relazione d'ordine <em>totale</em> su un insieme \( A \) è una relazione che è riflessiva, antisimmetrica, transitiva e totale (per ogni coppia di elementi \( a, b \) in \( A \), si ha \( a \leq b \) o \( b \leq a \)). Un esempio è la relazione "\(\leq\)" su \( \mathbb{N} \).</p>
+    </div>
+</div>
+
+<div class="exercise" id="exercise2">
+    <h2>Esercizio 2 - Relazione e Funzione</h2>
+    <p><strong>Testo:</strong> Sia \( Q = \{(a, b), (a, c), (a, d), (b, c)\} \subset \{a, b, c, d\} \times \{a, b, c, d\} \).</p>
+    <div class="explanation">
+        <p><strong>A.</strong> \( Q \) è una funzione? Poiché l'elemento \( a \) si mappa su più valori (\( b, c, d \)), \( Q \) non può essere una funzione. <strong>Risposta: Falso</strong>.</p>
+        <p><strong>B.</strong> \( Q \) è una relazione di equivalenza? \( Q \) non è riflessiva né simmetrica, quindi non è una relazione di equivalenza. <strong>Risposta: Falso</strong>.</p>
+        <p><strong>C.</strong> \( Q \) è una relazione transitiva? Non tutti i requisiti di transitività sono soddisfatti, quindi non è transitiva. <strong>Risposta: Falso</strong>.</p>
+        <p><strong>D.</strong> \( Q \) è una relazione d'ordine? Non essendo antisimmetrica né transitiva, non è una relazione d'ordine. <strong>Risposta: Falso</strong>.</p>
+    </div>
+</div>
+
+<div class="exercise" id="exercise3">
+    <h2>Esercizio 3 - Numerabilità di \( \mathbb{Z} \)</h2>
+    <p>Dimostriamo che \( \mathbb{Z} \) è numerabile costruendo una corrispondenza biunivoca con \( \mathbb{N} \). Possiamo enumerare \( \mathbb{Z} \) alternando numeri positivi e negativi: \( 0, 1, -1, 2, -2, \ldots \). Ciò definisce una biiezione tra \( \mathbb{N} \) e \( \mathbb{Z} \), dimostrando che \( \mathbb{Z} \) è numerabile.</p>
+</div>
+
+<div class="exercise" id="exercise4">
+    <h2>Esercizio 4 - Dimostrazione per Induzione</h2>
+    <p><strong>Testo:</strong> Qual è il più piccolo numero naturale \( k \) per cui \( n^2 > 2n + 1 \), \( \forall n \geq k \)?</p>
+    <div class="explanation">
+        <p><strong>Risposta:</strong> Il più piccolo valore di \( k \) è \( k = 3 \). Verifichiamo per induzione:</p>
+        <ul>
+            <li><strong>Base:</strong> Per \( n = 3 \), \( 3^2 = 9 \) e \( 2 \cdot 3 + 1 = 7 \), quindi \( 9 > 7 \).</li>
+            <li><strong>Passo induttivo:</strong> Supponiamo che sia vero per un certo \( n \geq 3 \), e proviamo per \( n+1 \).</li>
+        </ul>
+    </div>
+</div>
+
+<div class="exercise" id="exercise5">
+    <h2>Esercizio 5 - Logica Proposizionale</h2>
+    <div class="explanation">
+        <p><strong>A.</strong> \( (A \rightarrow B), (C \rightarrow \neg A), C \models \neg B \): Questo è vero, in quanto \( C \) implica \( \neg A \) e quindi \( \neg B \) se \( A \rightarrow B \).</p>
+        <p><strong>B.</strong> Se \( A \) è insoddisfacibile allora per ogni \( B \), vale \( A \models B \): Questo è vero per definizione.</p>
+        <p><strong>C.</strong> Se \( A \land \neg B \) è soddisfacibile allora il tableau di \( A \rightarrow B \) ha qualche ramo aperto: Vero.</p>
+        <p><strong>D.</strong> Esistono \( A \) e \( B \) tali che \( \neg(A \land B) \lor (A \rightarrow B) \) è insoddisfacibile: Falso.</p>
+        <p><strong>E.</strong> Se il tableau di \( A \) e il tableau di \( B \) hanno entrambi qualche ramo aperto allora il tableau di \( A \land B \) ha qualche ramo aperto: Vero.</p>
+    </div>
+</div>
+
+<div class="exercise" id="exercise6">
+    <h2>Esercizio 6 - Verità Logiche</h2>
+    <div class="explanation">
+        <p><strong>A.</strong> \( \forall x(P(x) \rightarrow \neg Q(x)) \rightarrow (\forall x\neg P(x) \rightarrow \neg \exists x Q(x)) \): Vero.</p>
+        <p><strong>B.</strong> \( \exists x(P(x) \rightarrow Q(x)) \leftrightarrow (\forall xP(x) \rightarrow \exists xQ(x)) \): Falso.</p>
+    </div>
+</div>
+
+<div class="exercise" id="exercise7">
+    <h2>Esercizio 7 - Linguaggio Predicativo</h2>
+    <div class="explanation">
+        <p><strong>A.</strong> Esiste l'insieme vuoto: \( \exists x \forall y (\neg (y \in x)) \).</p>
+        <p><strong>B.</strong> Per ogni coppia di insiemi esiste la loro intersezione: \( \forall x \forall y \exists z \forall w ((w \in z) \leftrightarrow ((w \in x) \land (w \in y))) \).</p>
+    </div>
+</div>
+
+<div class="exercise" id="exercise8">
+    <h2>Esercizio 8 - Modello nella Logica Predicativa</h2>
+    <div class="explanation">
+        <p><strong>Definizione:</strong> Un <em>modello</em> nella logica predicativa è una struttura matematica in cui ogni simbolo ha un’interpretazione specifica. Un modello per una teoria logica è costituito da un dominio di discorso e da un’interpretazione che assegna significati alle costanti, relazioni e funzioni.</p>
+    </div>
+</div>
+
+</body>
+</html>

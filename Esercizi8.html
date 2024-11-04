@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soluzioni Esercizi - Metodi Matematici</title>
+    <!-- MathJax CDN per formule matematiche -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .exercise {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .exercise h2 {
+            color: #333;
+        }
+        .explanation {
+            color: #555;
+            margin-top: 10px;
+        }
+        .answer {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Soluzioni degli Esercizi - Metodi Matematici per l'Informatica</h1>
+
+<div class="exercise" id="exercise1">
+    <h2>Esercizio 1 - Insiemi e Elementi</h2>
+    <p><strong>Testo:</strong> Sia \( A = \{0, (a, 0), (0, b), \{0, 1\}, a, b, \{0\}\} \).</p>
+    <div class="explanation">
+        <p><strong>A.</strong> \( A \) non è un insieme: Falso. <strong>Motivazione:</strong> Non ci sono elementi ripetuti in \( A \), quindi è un insieme.</p>
+        <p><strong>B.</strong> Esistono \( x, y, z, t \in A \) (con \( x \neq y \)) tali che \( x \in z \) e \( y \in t \): Vero. <strong>Motivazione:</strong> Ad esempio, \( 0 \in \{0, 1\} \) e \( 0 \in \{0\} \) con \( x = y = 0 \) e \( z = \{0, 1\} \), \( t = \{0\} \).</p>
+        <p><strong>C.</strong> \( A \) ha quattro elementi: Falso. <strong>Motivazione:</strong> L'insieme \( A \) contiene sette elementi distinti.</p>
+        <p><strong>D.</strong> Esistono \( x, y, z \in A \) tali che \( x \in y \) e \( y \subseteq z \): Vero. <strong>Motivazione:</strong> Ad esempio, \( 0 \in \{0\} \subseteq \{0, 1\} \) con \( x = 0 \), \( y = \{0\} \), e \( z = \{0, 1\} \).</p>
+    </div>
+</div>
+
+<div class="exercise" id="exercise2">
+    <h2>Esercizio 2 - Insiemi delle Parti e Numerabilità</h2>
+    <p><strong>Testo:</strong> Dato un insieme \( X \), indichiamo con \( 2^X \) l'insieme delle parti di \( X \). Indichiamo con \( T \) l’insieme dei multipli di 3 e con \( Q \) l’insieme dei multipli di 4.</p>
+    <div class="explanation">
+        <p><strong>A.</strong> \( 2^T \subseteq 2^Q \): Falso. <strong>Motivazione:</strong> Ci sono elementi in \( T \) che non appartengono a \( Q \), quindi non tutti i sottoinsiemi di \( T \) sono sottoinsiemi di \( Q \).</p>
+        <p><strong>B.</strong> \( 2^T \cap 2^Q \neq \emptyset \): Vero. <strong>Motivazione:</strong> L'insieme vuoto è comune a \( 2^T \) e \( 2^Q \), quindi l'intersezione non è vuota.</p>
+        <p><strong>C.</strong> \( Q \) è numerabile: Vero. <strong>Motivazione:</strong> Poiché \( Q \) è l’insieme dei multipli di 4, è numerabile (è in corrispondenza biunivoca con \( \mathbb{N} \)).</p>
+        <p><strong>D.</strong> \( 2^Q \) è numerabile: Falso. <strong>Motivazione:</strong> \( 2^Q \), essendo l’insieme delle parti di un insieme numerabile, è non numerabile.</p>
+    </div>
+</div>
+
+<div class="exercise" id="exercise3">
+    <h2>Esercizio 3 - Relazioni e Proprietà</h2>
+    <div class="explanation">
+        <p><strong>A.</strong> Per ogni insieme \( A \neq \emptyset \), la relazione \( A \times A \) non è antisimmetrica: Vero. <strong>Motivazione:</strong> In \( A \times A \), per ogni \( (a, b) \) e \( (b, a) \), se \( a \neq b \), non si ha antisimmetria.</p>
+        <p><strong>B.</strong> Per ogni insieme \( A \neq \emptyset \), la relazione \( A \times A \) è una relazione di equivalenza: Falso. <strong>Motivazione:</strong> La relazione \( A \times A \) non è riflessiva, quindi non può essere una relazione di equivalenza.</p>
+        <p><strong>C.</strong> Ogni relazione di equivalenza che contenga una coppia \( (u, v) \) con \( u \neq v \) è esclusivamente riflessiva, simmetrica e transitiva: Vero. <strong>Motivazione:</strong> Questa definizione coincide con quella di relazione di equivalenza.</p>
+        <p><strong>D.</strong> Per ogni relazione \( R \) su \( A \) esiste una relazione di equivalenza su \( A \) che contiene \( R \): Vero. <strong>Motivazione:</strong> Si può ottenere la chiusura riflessiva, simmetrica e transitiva di \( R \).</p>
+    </div>
+</div>
+
+<div class="exercise" id="exercise4">
+    <h2>Esercizio 4 - Relazione di Equivalenza</h2>
+    <p><strong>Testo:</strong> Scrivere una relazione di equivalenza \( R \subseteq \{a, b, c, d\} \times \{a, b, c, d\} \) che abbia due classi di equivalenza.</p>
+    <div class="explanation">
+        <p><strong>Risposta:</strong> Definiamo \( R = \{(a, a), (b, b), (c, c), (d, d), (a, b), (b, a)\} \).</p>
+        <p><strong>Insieme quoziente:</strong> Le classi di equivalenza sono \( \{a, b\} \) e \( \{c, d\} \).</p>
+    </div>
+</div>
+
+<div class="exercise" id="exercise5">
+    <h2>Esercizio 5 - Somma Finita</h2>
+    <p><strong>Testo:</strong> Dimostrare che, per ogni \( n \geq 1 \): \( \sum_{i=1}^n \frac{1}{i(i+1)} = 1 - \frac{1}{n+1} \).</p>
+    <div class="explanation">
+        <p><strong>Dimostrazione:</strong> Utilizziamo la scomposizione in fratti semplici: \( \frac{1}{i(i+1)} = \frac{1}{i} - \frac{1}{i+1} \). La somma diventa telescopica e si semplifica, portando al risultato finale \( 1 - \frac{1}{n+1} \).</p>
+    </div>
+</div>
+
+<div class="exercise" id="exercise6">
+    <h2>Esercizio 6 - Soddisfacibilità nella Logica Proposizionale</h2>
+    <div class="explanation">
+        <p><strong>Definizione:</strong> Una formula è soddisfacibile nella logica proposizionale se esiste un'interpretazione in cui la formula è vera. Se nessuna interpretazione la rende vera, allora è insoddisfacibile.</p>
+    </div>
+</div>
+
+<div class="exercise" id="exercise7">
+    <h2>Esercizio 7 - Formalizzazione in Logica Proposizionale</h2>
+    <div class="explanation">
+        <p><strong>1.</strong> Né Anita né Marcello vanno al cinema: \( \neg A \land \neg B \).</p>
+        <p><strong>2.</strong> Anita va al cinema solamente se Marcello la invita: \( A \rightarrow C \).</p>
+        <p><strong>3.</strong> Marcello va al cinema senza invitare Anita: \( B \land \neg C \).</p>
+        <p><strong>4.</strong> O Marcello invita Anita oppure Anita non va al cinema: \( C \lor \neg A \).</p>
+    </div>
+</div>
+
+<div class="exercise" id="exercise8">
+    <h2>Esercizio 8 - Valutazione di Formule Logiche</h2>
+    <div class="explanation">
+        <p><strong>1.</strong> \( \neg\neg A \land A \): <strong>Insoddisfacibile</strong> (I).</p>
+        <p><strong>2.</strong> \( \neg A \lor \neg\neg A \): <strong>Tautologia</strong> (T).</p>
+        <p><strong>3.</strong> \( \neg(A \lor B) \leftrightarrow (A \land \neg B) \): <strong>Falsificabile</strong> (F).</p>
+        <p><strong>4.</strong> \( (A \rightarrow B) \leftrightarrow (\neg B \rightarrow \neg A) \): <strong>Tautologia</strong> (T).</p>
+        <p><strong>5.</strong> \( (A \land \neg A) \rightarrow B \): <strong>Tautologia</strong> (T).</p>
+    </div>
+</div>
+
+<div class="exercise" id="exercise9">
+    <h2>Esercizio 9 - Interpretazioni per la Logica del Primo Ordine</h2>
+    <p><strong>Testo:</strong> Definire (se possibile) un’interpretazione che verifichi e una che falsifichi la formula \( (\exists y P(y) \land \exists z Q(z)) \rightarrow \exists x(P(x) \land Q(x)) \).</p>
+    <div class="explanation">
+        <p><strong>Interpretazione che verifica la formula:</strong> Se esistono elementi che soddisfano contemporaneamente \( P \) e \( Q \), la formula è verificata.</p>
+        <p><strong>Interpretazione che falsifica la formula:</strong> Se ci sono elementi distinti \( y \) e \( z \) tali che \( P(y) \) è vero e \( Q(z) \) è vero, ma non esiste alcun \( x \) che soddisfi entrambe le proprietà, allora la formula è falsa.</p>
+    </div>
+</div>
+
+</body>
+</html>

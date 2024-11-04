@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soluzioni Esercizi - Metodi Matematici</title>
+    <!-- MathJax CDN per formule matematiche -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .exercise {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .exercise h2 {
+            color: #333;
+        }
+        .explanation {
+            color: #555;
+            margin-top: 10px;
+        }
+        .answer {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Soluzioni degli Esercizi - Metodi Matematici per l'Informatica</h1>
+
+<h2>Parte 1: Insiemi, Relazioni, Funzioni (Esercizi 1–4)</h2>
+
+<div class="exercise" id="exercise1">
+    <h2>Esercizio 1 - Insiemi</h2>
+    <p><strong>Testo:</strong> Sia \( A = \{2, \{4, 5\}, 4, (5, 1), 3\} \).</p>
+    <div class="explanation">
+        <p><strong>A.</strong> \( \exists x[(x \subset A) \land (5 \in x)] \): L'insieme \( \{4, 5\} \subset A \) e contiene \( 5 \). <strong>Risposta: Vero</strong>.</p>
+        <p><strong>B.</strong> \( \{5, 4\} \in A \): L'insieme \( \{5, 4\} \) non è presente in \( A \) come elemento. <strong>Risposta: Falso</strong>.</p>
+        <p><strong>C.</strong> \( \{3, 4\} \subset A \): Sebbene \( 3 \) e \( 4 \) siano in \( A \), \( \{3, 4\} \) come sottoinsieme non è incluso come singolo oggetto. <strong>Risposta: Falso</strong>.</p>
+        <p><strong>D.</strong> \( (4, 5) \in A \): La coppia \( (4, 5) \) non è un elemento di \( A \). <strong>Risposta: Falso</strong>.</p>
+    </div>
+</div>
+
+<div class="exercise" id="exercise2">
+    <h2>Esercizio 2 - Unione di Insiemi</h2>
+    <p><strong>Testo:</strong> Siano \( A \) e \( B \) tali che \( A \cup B = B \).</p>
+    <div class="explanation">
+        <p><strong>A.</strong> \( A = B \): Non è necessariamente vero che \( A \) debba essere uguale a \( B \). <strong>Risposta: Falso</strong>.</p>
+        <p><strong>B.</strong> \( A \subseteq B \): Dato che \( A \cup B = B \), segue che \( A \subseteq B \). <strong>Risposta: Vero</strong>.</p>
+        <p><strong>C.</strong> \( A \notin B \): La condizione non implica che \( A \) debba appartenere a \( B \). <strong>Risposta: Falso</strong>.</p>
+        <p><strong>D.</strong> \( A \neq \emptyset \): Non possiamo concludere che \( A \) sia non vuoto. <strong>Risposta: Falso</strong>.</p>
+        <p><strong>E.</strong> \( A \) e \( B \) hanno la stessa cardinalità: Nulla ci garantisce che abbiano la stessa cardinalità. <strong>Risposta: Falso</strong>.</p>
+    </div>
+</div>
+
+<div class="exercise" id="exercise3">
+    <h2>Esercizio 3 - Chiusura Transitiva</h2>
+    <p><strong>Testo:</strong> La chiusura transitiva della relazione \( R = \{(1, 2), (2, 1), (1, 3), (3, 2)\} \subset \mathbb{N} \times \mathbb{N} \).</p>
+    <div class="explanation">
+        <p><strong>A.</strong> \( R \) è uguale a \( \mathbb{N} \times \mathbb{N} \): Non è vero. <strong>Risposta: Falso</strong>.</p>
+        <p><strong>B.</strong> \( R \) è uguale a \( \{1, 2, 3\} \times \{1, 2, 3\} \): La chiusura transitiva comprende solo coppie finite. <strong>Risposta: Falso</strong>.</p>
+        <p><strong>C.</strong> \( R \) include \( \{(1, 1), (2, 2), (3, 3), (2, 3), (3, 1)\) come sua chiusura: Esatto. <strong>Risposta: Vero</strong>.</p>
+        <p><strong>D.</strong> \( R \) è una relazione di equivalenza su \( \mathbb{N} \times \mathbb{N} \): Non tutte le proprietà di equivalenza sono soddisfatte. <strong>Risposta: Falso</strong>.</p>
+    </div>
+</div>
+
+<div class="exercise" id="exercise4">
+    <h2>Esercizio 4 - Relazione</h2>
+    <p><strong>Testo:</strong> Sia \( Q = \{(a, b), (a, c), (a, d), (b, c)\} \subset \{a, b, c, d\} \times \{a, b, c, d\} \).</p>
+    <div class="explanation">
+        <p><strong>A.</strong> \( Q \) è una funzione iniettiva: Poiché uno stesso elemento si mappa su più valori, \( Q \) non è una funzione. <strong>Risposta: Falso</strong>.</p>
+        <p><strong>B.</strong> \( Q \) è una relazione di equivalenza: Non è riflessiva né simmetrica. <strong>Risposta: Falso</strong>.</p>
+        <p><strong>C.</strong> \( Q \) è una relazione transitiva: Non sono rispettate tutte le condizioni per la transitività. <strong>Risposta: Falso</strong>.</p>
+    </div>
+</div>
+
+<h2>Parte 2: Numerabilità ed Equivalenza (Esercizi 5–6)</h2>
+
+<div class="exercise" id="exercise5">
+    <h2>Esercizio 5 - Numerabilità</h2>
+    <p><strong>Testo:</strong> Sia dato l’insieme \( A = \{a, aa, aaa, aaaa, \ldots \} \).</p>
+    <div class="explanation">
+        <p><strong>A.</strong> \( \exists x \in A \) tale che \( \forall y \in A, \ell(y) \leq \ell(x) \): Non esiste una parola di lunghezza massima. <strong>Risposta: Falso</strong>.</p>
+        <p><strong>B.</strong> \( A \) non è numerabile: È numerabile. <strong>Risposta: Falso</strong>.</p>
+        <p><strong>C.</strong> \( A \) è in corrispondenza biunivoca con l’insieme \( \{2^k \mid k \in \mathbb{N}\} \): Entrambi sono infiniti numerabili. <strong>Risposta: Vero</strong>.</p>
+        <p><strong>D.</strong> \( A \) contiene un insieme di parole di lunghezza infinita: Tutte le parole sono finite. <strong>Risposta: Falso</strong>.</p>
+    </div>
+</div>
+
+<div class="exercise" id="exercise6">
+    <h2>Esercizio 6 - Relazione di Equivalenza</h2>
+    <p><strong>Testo:</strong> La relazione \( R = \{(x, y) \in \mathbb{N} \times \mathbb{N} \mid x + y \text{ è pari}\} \) è una relazione di equivalenza.</p>
+    <div class="explanation">
+        <p>La relazione è riflessiva, simmetrica e transitiva, quindi è una relazione di equivalenza.</p>
+        <p><strong>Insieme quoziente:</strong> La relazione divide \( \mathbb{N} \) in due classi: numeri pari e dispari.</p>
+    </div>
+</div>
+
+<h2>Parte 3: Induzione (Esercizio 7)</h2>
+
+<div class="exercise" id="exercise7">
+    <h2>Esercizio 7 - Induzione</h2>
+    <p><strong>Testo:</strong> Dimostrare per induzione che, dato un insieme \( V \) di \( n \) punti con \( n \geq 2 \), possiamo collegarli a due a due con \( \frac{n(n-1)}{2} \) segmenti distinti.</p>
+    <div class="explanation">
+        <p>La dimostrazione procede per induzione su \( n \). Base: per \( n = 2 \) ci sono \( \frac{2(2-1)}{2} = 1 \) segmento. Passo induttivo: se è vero per \( n \), allora per \( n+1 \) possiamo aggiungere \( n \) nuovi segmenti, verificando la formula.</p>
+    </div>
+</div>
+
+<h2>Parte 4: Logica (Esercizi 8–10)</h2>
+
+<div class="exercise" id="exercise8">
+    <h2>Esercizio 8 - Logica</h2>
+    <p><strong>Testo:</strong> Formalizzare e verificare la correttezza dell’affermazione:</p>
+    <p>Se la Roma ha vinto la partita, allora il Brescia e il Genoa retrocedono. Se almeno uno tra il Brescia e il Genoa retrocede, allora la Sampdoria si salva. Quindi, se la Sampdoria non si salva, allora la Roma non ha vinto la partita.</p>
+    <div class="explanation">
+        <p><strong>Formalizzazione:</strong></p>
+        <p>\( R \rightarrow (B \land G) \), \( (B \lor G) \rightarrow S \), quindi \( \neg S \rightarrow \neg R \).</p>
+    </div>
+</div>
+
+<div class="exercise" id="exercise9">
+    <h2>Esercizio 9 - Enunciati Logici</h2>
+    <div class="explanation">
+        <p><strong>A.</strong> \( (\forall x A(x) \rightarrow \forall x B(x)) \rightarrow \forall x(A(x) \rightarrow B(x)) \): <strong>Risposta: Vero</strong>.</p>
+        <p><strong>B.</strong> \( (\forall x A(x) \rightarrow \exists x B(x)) \leftrightarrow \exists x(A(x) \rightarrow B(x)) \): <strong>Risposta: Falso</strong>.</p>
+    </div>
+</div>
+
+<div class="exercise" id="exercise10">
+    <h2>Esercizio 10 - Formalizzazione in Linguaggio Predicativo</h2>
+    <div class="explanation">
+        <p><strong>A.</strong> \( < \) ha un elemento minimo: \( \exists x \forall y (x \leq y) \).</p>
+        <p><strong>B.</strong> \( < \) non ha un elemento massimo: \( \forall x \exists y (x < y) \).</p>
+        <p><strong>C.</strong> \( < \) è denso: \( \forall x \forall y (x < y \rightarrow \exists z (x < z < y)) \).</p>
+    </div>
+</div>
+
+</body>
+</html>
