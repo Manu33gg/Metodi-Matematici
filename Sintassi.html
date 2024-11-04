@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Sintassi e Strumenti Matematici</title>
+    <!-- Inclusione di MathJax per le formule matematiche -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']],
+          displayMath: [['$$', '$$'], ['\\[', '\\]']]
+        },
+        options: {
+          skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      };
+    </script>
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .theory {
+            margin-bottom: 20px;
+        }
+        .example {
+            background-color: #f0f0f0;
+            padding: 5px;
+            margin: 10px 0;
+        }
+        code {
+            background-color: #f0f0f0;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+        .error-list, .examples-list {
+            padding-left: 20px;
+        }
+        .error-list li, .examples-list li {
+            margin: 3px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sintassi e Strumenti Matematici</h1>
+
+    <section class="theory" aria-labelledby="sommatorie">
+        <h2 id="sommatorie">Sommatorie</h2>
+        <p>La sommatoria rappresenta una somma di una sequenza di termini. La notazione generale è:</p>
+        <p style="text-align: center;">
+            $$ \sum_{k = m}^{n} a_k $$
+        </p>
+        <p>dove:</p>
+        <ul class="examples-list">
+            <li>$$ \sum $$ è il simbolo di sommatoria.</li>
+            <li>$$ k $$ è l'indice di sommatoria.</li>
+            <li>$$ m $$ è il valore iniziale dell'indice.</li>
+            <li>$$ n $$ è il valore finale dell'indice.</li>
+            <li>$$ a_k $$ è il termine generale della somma.</li>
+        </ul>
+        <div class="example">
+            <p><strong>Esempio:</strong> Calcolare la somma dei primi 5 numeri naturali:</p>
+            <p style="text-align: center;">
+                $$ \sum_{k = 1}^{5} k = 1 + 2 + 3 + 4 + 5 = 15 $$
+            </p>
+        </div>
+        <h3>Errori Comuni da Evitare</h3>
+        <ul class="error-list">
+            <li><strong>Confondere gli indici:</strong> Usare correttamente l'indice di sommatoria senza duplicare simboli.</li>
+            <li><strong>Limiti errati:</strong> Controllare i limiti $$ m $$ e $$ n $$, verificando che $$ m \leq n $$.</li>
+            <li><strong>Termine ambiguo:</strong> Definire chiaramente $$ a_k $$ in funzione dell'indice $$ k $$.</li>
+            <li><strong>Notazione scorretta:</strong> Non omettere il simbolo $$ \sum $$ o gli indici se non chiaramente deducibili dal contesto.</li>
+        </ul>
+    </section>
+
+    <section class="theory" aria-labelledby="insiemi">
+        <h2 id="insiemi">Simboli Insiemistici</h2>
+        <p>I simboli utilizzati nella teoria degli insiemi esprimono relazioni di appartenenza e inclusione.</p>
+        <ul class="examples-list">
+            <li>$$ \in $$: Appartenenza, es. $$ a \in A $$.</li>
+            <li>$$ \notin $$: Non appartenenza, es. $$ b \notin B $$.</li>
+            <li>$$ \subseteq $$: Sottoinsieme, es. $$ A \subseteq B $$.</li>
+            <li>$$ \subset $$: Sottoinsieme proprio, es. $$ A \subset B $$.</li>
+            <li>$$ \cup $$: Unione, es. $$ A \cup B $$.</li>
+            <li>$$ \cap $$: Intersezione, es. $$ A \cap B $$.</li>
+            <li>$$ - $$ o $$ \setminus $$: Differenza, es. $$ A - B $$.</li>
+            <li>$$ \emptyset $$ o $$ \{\} $$: Insieme vuoto.</li>
+            <li>$$ \mathbb{N}, \mathbb{Z}, \mathbb{Q}, \mathbb{R} $$: Insiemi numerici.</li>
+        </ul>
+        <h3>Esempi</h3>
+        <p>Se $$ A = \{1, 2, 3\} $$ e $$ B = \{3, 4, 5\} $$:</p>
+        <ul class="examples-list">
+            <li>$$ 2 \in A $$, ma $$ 2 \notin B $$.</li>
+            <li>$$ A \cap B = \{3\} $$.</li>
+            <li>$$ A \cup B = \{1, 2, 3, 4, 5\} $$.</li>
+            <li>$$ A - B = \{1, 2\} $$.</li>
+        </ul>
+        <h3>Errori Comuni da Evitare</h3>
+        <ul class="error-list">
+            <li><strong>Confusione tra $$ \in $$ e $$ \subseteq $$:</strong> $$ a \in A $$ è appartenenza, $$ A \subseteq B $$ è inclusione.</li>
+            <li><strong>Simboli errati per appartenenza:</strong> Non scrivere $$ a \subseteq A $$ quando si intende $$ a \in A $$.</li>
+            <li><strong>Omissione delle parentesi graffe:</strong> Utilizzare $$ \{\} $$ per insiemi.</li>
+            <li><strong>Assunzioni errate su $$ A \subset B $$:</strong> $$ A \subset B $$ implica $$ A \neq B $$, ma $$ A \subseteq B $$ non necessariamente.</li>
+        </ul>
+    </section>
+
+    <section class="theory" aria-labelledby="errori">
+        <h2 id="errori">Errori da Non Fare</h2>
+        <p>Ecco una lista di errori comuni nello studio di insiemi, relazioni e sommatorie:</p>
+        <ul class="error-list">
+            <li><strong>Dimenticare condizioni sugli indici:</strong> Specificare l'intervallo per l'indice nelle sommatorie.</li>
+            <li><strong>Confusione tra elementi e sottoinsiemi:</strong> Un elemento non è un sottoinsieme a meno che non sia un insieme.</li>
+            <li><strong>Verifiche incomplete sulle relazioni:</strong> Controllare le proprietà (riflessiva, simmetrica, transitiva).</li>
+            <li><strong>Assenza di dominio e codominio:</strong> Specificare sempre dominio e codominio nelle funzioni.</li>
+            <li><strong>Notazione ambigua:</strong> Definire chiaramente ogni simbolo per evitare ambiguità.</li>
+        </ul>
+    </section>
+
+    <section class="theory" aria-labelledby="strumenti">
+        <h2 id="strumenti">Strumenti per Scrivere la Matematica</h2>
+        <p>Per scrivere formule matematiche in modo chiaro, si consiglia <strong>LaTeX</strong> o, per le pagine web, <strong>MathJax</strong>.</p>
+        <h3>Esempio di Formula in LaTeX</h3>
+        <p>Per la somma dei primi $$ n $$ numeri naturali:</p>
+        <p style="text-align: center;">
+            $$ \sum_{k=1}^{n} k = \frac{n(n+1)}{2} $$
+        </p>
+        <p>Codice LaTeX: <code>\sum_{k=1}^{n} k = \frac{n(n+1)}{2}</code></p>
+        <h3>Consigli per l'Uso di LaTeX</h3>
+        <ul class="examples-list">
+            <li>Usare <code>$$ ... $$</code> o <code>\\[ ... \\]</code> per formule in display mode.</li>
+            <li>Usare <code>$ ... $</code> o <code>\\( ... \\)</code> per formule inline.</li>
+            <li>Chiudere correttamente tutte le parentesi.</li>
+            <li>Comandi appropriati per simboli matematici (es. <code>\in</code> per $$ \in $$).</li>
+        </ul>
+    </section>
+</body>
+</html>
