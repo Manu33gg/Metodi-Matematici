@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soluzioni ed Esempi - Metodi Matematici per l'Informatica</title>
+    <!-- MathJax per le formule matematiche -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .exercise {
+            background: #fff;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .exercise h3 {
+            color: #0056b3;
+        }
+        .solution {
+            color: #333;
+        }
+        .explanation {
+            color: #555;
+            margin-top: 10px;
+            font-style: italic;
+        }
+        .theory {
+            background: #e9f7ef;
+            padding: 15px;
+            border-left: 5px solid #27ae60;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Metodi Matematici per l'Informatica: Esempi ed Esercizi</h1>
+
+    <!-- Teoria: Insiemi -->
+    <div class="theory">
+        <h2>Teoria: Insiemi</h2>
+        <p>Un <strong>insieme</strong> è una collezione di oggetti distinti, detti elementi dell'insieme. Gli insiemi sono fondamentali in matematica e informatica per definire strutture e concetti.</p>
+        <p>Operazioni fondamentali sugli insiemi includono l'unione (\( \cup \)), l'intersezione (\( \cap \)) e la differenza (\( - \)). Due insiemi \( A \) e \( B \) sono uguali se contengono esattamente gli stessi elementi.</p>
+    </div>
+
+    <!-- Esempio 1 -->
+    <div class="exercise">
+        <h2>Esempio 1: Operazioni con Insiemi</h2>
+        <h3>Domanda</h3>
+        <p>Siano dati gli insiemi \( A = \{1, 2, 3\} \), \( B = \{3, 4, 5\} \) e \( C = \{5, 6\} \). Calcolare:</p>
+        <ol>
+            <li>\( A \cup B \)</li>
+            <li>\( A \cap B \)</li>
+            <li>\( (A \cup B) - C \)</li>
+            <li>\( A \times C \)</li>
+        </ol>
+        <h3>Soluzione</h3>
+        <p>
+            1. \( A \cup B = \{1, 2, 3, 4, 5\} \) <br>
+            2. \( A \cap B = \{3\} \) <br>
+            3. \( (A \cup B) - C = \{1, 2, 3, 4\} \) <br>
+            4. \( A \times C = \{(1,5), (1,6), (2,5), (2,6), (3,5), (3,6)\} \)
+        </p>
+        <div class="explanation">
+            <p><b>Spiegazione:</b> Abbiamo applicato le operazioni fondamentali sugli insiemi. Il prodotto cartesiano \( A \times C \) consiste in tutte le coppie ordinate dove il primo elemento è in \( A \) e il secondo in \( C \).</p>
+        </div>
+    </div>
+
+    <!-- Teoria: Relazioni -->
+    <div class="theory">
+        <h2>Teoria: Relazioni</h2>
+        <p>Una <strong>relazione</strong> \( R \) su un insieme \( A \) è un sottoinsieme del prodotto cartesiano \( A \times A \). Le relazioni possono avere proprietà come riflessività, simmetria, antisimmetria e transitività.</p>
+        <p>Una relazione è:</p>
+        <ul>
+            <li><strong>Riflessiva</strong> se \( \forall x \in A, (x, x) \in R \).</li>
+            <li><strong>Simmetrica</strong> se \( \forall x, y \in A, (x, y) \in R \Rightarrow (y, x) \in R \).</li>
+            <li><strong>Antisimmetrica</strong> se \( \forall x, y \in A, (x, y) \in R \land (y, x) \in R \Rightarrow x = y \).</li>
+            <li><strong>Transitiva</strong> se \( \forall x, y, z \in A, (x, y) \in R \land (y, z) \in R \Rightarrow (x, z) \in R \).</li>
+        </ul>
+        <p>Una relazione di equivalenza è una relazione che è riflessiva, simmetrica e transitiva. Una relazione d'ordine parziale è riflessiva, antisimmetrica e transitiva.</p>
+    </div>
+
+    <!-- Esempio 2 -->
+    <div class="exercise">
+        <h2>Esempio 2: Verifica delle Proprietà di una Relazione</h2>
+        <h3>Domanda</h3>
+        <p>Data la relazione \( R = \{(1,1), (2,2), (3,3), (1,2), (2,3)\} \) su \( A = \{1,2,3\} \), determinare se \( R \) è:</p>
+        <ol>
+            <li>Riflessiva</li>
+            <li>Simmetrica</li>
+            <li>Transitiva</li>
+            <li>Una relazione di equivalenza</li>
+        </ol>
+        <h3>Soluzione</h3>
+        <p>
+            1. Riflessiva: <b>Sì</b>, poiché \( (1,1), (2,2), (3,3) \in R \). <br>
+            2. Simmetrica: <b>No</b>, poiché \( (1,2) \in R \) ma \( (2,1) \notin R \). <br>
+            3. Transitiva: <b>No</b>, poiché \( (1,2), (2,3) \in R \) ma \( (1,3) \notin R \). <br>
+            4. Relazione di equivalenza: <b>No</b>, perché non è simmetrica né transitiva.
+        </p>
+        <div class="explanation">
+            <p><b>Spiegazione:</b> Abbiamo verificato ciascuna proprietà controllando le definizioni e verificando la presenza o assenza delle coppie necessarie in \( R \).</p>
+        </div>
+    </div>
+
+    <!-- Teoria: Funzioni -->
+    <div class="theory">
+        <h2>Teoria: Funzioni</h2>
+        <p>Una <strong>funzione</strong> \( f \) da un insieme \( A \) a un insieme \( B \) è una relazione che associa a ogni elemento \( a \in A \) uno e un solo elemento \( b \in B \), denotato \( f(a) = b \).</p>
+        <p>Una funzione può essere:</p>
+        <ul>
+            <li><strong>Iniettiva</strong> (o uno a uno) se \( f(a_1) = f(a_2) \Rightarrow a_1 = a_2 \).</li>
+            <li><strong>Suriettiva</strong> (o su) se \( \forall b \in B, \exists a \in A \) tale che \( f(a) = b \).</li>
+            <li><strong>Biiettiva</strong> se è sia iniettiva che suriettiva.</li>
+        </ul>
+    </div>
+
+    <!-- Esempio 3 -->
+    <div class="exercise">
+        <h2>Esempio 3: Proprietà delle Funzioni</h2>
+        <h3>Domanda</h3>
+        <p>Sia \( f: \mathbb{R} \rightarrow \mathbb{R} \) definita da \( f(x) = 3x + 2 \). Determinare se \( f \) è:</p>
+        <ol>
+            <li>Iniettiva</li>
+            <li>Suriettiva</li>
+            <li>Biiettiva</li>
+        </ol>
+        <h3>Soluzione</h3>
+        <p>
+            1. Iniettiva: <b>Sì</b>. Se \( f(x_1) = f(x_2) \), allora \( 3x_1 + 2 = 3x_2 + 2 \) implica \( x_1 = x_2 \). <br>
+            2. Suriettiva: <b>Sì</b>. Per ogni \( y \in \mathbb{R} \), esiste \( x = \frac{y - 2}{3} \) tale che \( f(x) = y \). <br>
+            3. Biiettiva: <b>Sì</b>, poiché è sia iniettiva che suriettiva.
+        </p>
+        <div class="explanation">
+            <p><b>Spiegazione:</b> La funzione \( f \) è una retta non orizzontale, quindi è biiettiva su \( \mathbb{R} \).</p>
+        </div>
+    </div>
+
+    <!-- Teoria: Cardinalità -->
+    <div class="theory">
+        <h2>Teoria: Cardinalità degli Insiemi</h2>
+        <p>La <strong>cardinalità</strong> di un insieme è una misura del "numero di elementi" dell'insieme. Un insieme è detto:</p>
+        <ul>
+            <li><strong>Finito</strong> se ha un numero finito di elementi.</li>
+            <li><strong>Infinito numerabile</strong> se può essere messo in corrispondenza biunivoca con \( \mathbb{N} \).</li>
+            <li><strong>Innumerabile</strong> se non può essere messo in corrispondenza biunivoca con \( \mathbb{N} \).</li>
+        </ul>
+        <p>L'insieme dei numeri reali \( \mathbb{R} \) è un esempio di insieme infinito innnumerabile, mentre \( \mathbb{N} \), \( \mathbb{Z} \) e \( \mathbb{Q} \) sono infiniti numerabili.</p>
+    </div>
+
+    <!-- Esempio 4 -->
+    <div class="exercise">
+        <h2>Esempio 4: Numerabilità degli Insiemi</h2>
+        <h3>Domanda</h3>
+        <p>Dimostrare che l'insieme dei numeri razionali \( \mathbb{Q} \) è numerabile.</p>
+        <h3>Soluzione</h3>
+        <p>L'insieme \( \mathbb{Q} \) può essere messo in corrispondenza biunivoca con \( \mathbb{N} \) enumerando le frazioni in una matrice e percorrendola secondo le diagonali (metodo di Cantor). Poiché i numeri razionali possono essere espressi come frazioni di interi, e gli interi sono numerabili, segue che \( \mathbb{Q} \) è numerabile.</p>
+        <div class="explanation">
+            <p><b>Spiegazione:</b> Nonostante \( \mathbb{Q} \) sembri "più grande" di \( \mathbb{N} \), la numerabilità dipende dalla possibilità di elencare gli elementi in una sequenza infinita, cosa possibile per \( \mathbb{Q} \).</p>
+        </div>
+    </div>
+
+    <!-- Teoria: Induzione Matematica -->
+    <div class="theory">
+        <h2>Teoria: Induzione Matematica</h2>
+        <p>L'induzione matematica è un metodo di dimostrazione usato per provare che una proprietà vale per tutti i numeri naturali \( n \geq n_0 \). Consiste in due passi:</p>
+        <ol>
+            <li><strong>Base Induttiva:</strong> Si verifica che la proprietà vale per \( n = n_0 \).</li>
+            <li><strong>Passo Induttivo:</strong> Si assume che la proprietà valga per un \( n \geq n_0 \) (ipotesi induttiva) e si dimostra che allora vale anche per \( n+1 \).</li>
+        </ol>
+    </div>
+
+    <!-- Esempio 5 -->
+    <div class="exercise">
+        <h2>Esempio 5: Dimostrazione per Induzione</h2>
+        <h3>Domanda</h3>
+        <p>Dimostrare che per ogni \( n \geq 1 \), la somma dei primi \( n \) numeri naturali è data da:
+            \[
+            \sum_{k=1}^{n} k = \frac{n(n+1)}{2}
+            \]
+        </p>
+        <h3>Soluzione</h3>
+        <p><b>Base Induttiva:</b> Per \( n = 1 \),
+            \[
+            \sum_{k=1}^{1} k = 1 = \frac{1 \cdot (1+1)}{2} = 1
+            \]
+            Quindi la proprietà vale per \( n = 1 \).
+        </p>
+        <p><b>Passo Induttivo:</b> Supponiamo che la proprietà valga per \( n \), ovvero:
+            \[
+            \sum_{k=1}^{n} k = \frac{n(n+1)}{2}
+            \]
+            Dobbiamo dimostrare che allora vale anche per \( n+1 \):
+            \[
+            \sum_{k=1}^{n+1} k = \left( \sum_{k=1}^{n} k \right) + (n+1) = \frac{n(n+1)}{2} + (n+1) = \frac{n(n+1) + 2(n+1)}{2}
+            \]
+            \[
+            = \frac{(n+1)(n + 2)}{2} = \frac{(n+1)((n+1)+1)}{2}
+            \]
+            Quindi la proprietà vale anche per \( n+1 \).
+        </p>
+        <div class="explanation">
+            <p><b>Spiegazione:</b> Abbiamo utilizzato l'ipotesi induttiva per \( n \) e dimostrato che la formula vale per \( n+1 \), completando così la dimostrazione per induzione.</p>
+        </div>
+    </div>
+
+    <!-- Esempio 6 -->
+    <div class="exercise">
+        <h2>Esempio 6: Dimostrazione per Induzione - Disuguaglianze</h2>
+        <h3>Domanda</h3>
+        <p>Dimostrare che per ogni \( n \geq 1 \):
+            \[
+            2^n \geq n^2
+            \]
+        </p>
+        <h3>Soluzione</h3>
+        <p><b>Base Induttiva:</b> Per \( n = 1 \):
+            \[
+            2^1 = 2 \geq 1^2 = 1
+            \]
+            Per \( n = 2 \):
+            \[
+            2^2 = 4 \geq 2^2 = 4
+            \]
+            Per \( n = 3 \):
+            \[
+            2^3 = 8 \geq 3^2 = 9 \quad \text{(falso)}
+            \]
+            Notiamo che l'uguaglianza non vale per \( n = 3 \). Modifichiamo l'enunciato per \( n \geq 5 \).
+        </p>
+        <p><b>Nuova Base Induttiva:</b> Per \( n = 5 \):
+            \[
+            2^5 = 32 \geq 5^2 = 25
+            \]
+        </p>
+        <p><b>Passo Induttivo:</b> Supponiamo che \( 2^n \geq n^2 \) valga per \( n \geq 5 \). Dimostriamo per \( n+1 \):
+            \[
+            2^{n+1} = 2 \cdot 2^n \geq 2 \cdot n^2
+            \]
+            Poiché per \( n \geq 5 \):
+            \[
+            2n^2 \geq (n+1)^2
+            \]
+            Dimostriamo quest'ultima disuguaglianza:
+            \[
+            2n^2 - (n+1)^2 = 2n^2 - (n^2 + 2n + 1) = n^2 - 2n -1
+            \]
+            Per \( n \geq 5 \), \( n^2 - 2n -1 > 0 \), quindi \( 2n^2 \geq (n+1)^2 \). Quindi:
+            \[
+            2^{n+1} \geq (n+1)^2
+            \]
+            La proprietà vale per \( n+1 \).
+        </p>
+        <div class="explanation">
+            <p><b>Spiegazione:</b> In questo caso, abbiamo dovuto modificare l'enunciato e la base induttiva per \( n \geq 5 \) poiché la disuguaglianza non è vera per tutti i naturali.</p>
+        </div>
+    </div>
+
+</body>
+</html>
