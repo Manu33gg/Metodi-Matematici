@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soluzioni Esame Metodi Matematici per l'Informatica - 22 Gennaio 2019</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .exercise {
+            background: #fff;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .exercise h3 {
+            color: #0056b3;
+        }
+        .solution {
+            color: #333;
+        }
+        .explanation {
+            color: #555;
+            margin-top: 10px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <h1>Soluzioni Esame Metodi Matematici per l'Informatica - 22 Gennaio 2019</h1>
+
+    <!-- Esercizio 1 -->
+    <div class="exercise">
+        <h2>Esercizio 1</h2>
+        <h3>Domanda</h3>
+        <p>Sia \( A = \{0, (a, 0), (0, b), \{0, 1\}, a, b, \{0\}\} \). Rispondi alle seguenti affermazioni con Vero o Falso:</p>
+        <ol>
+            <li>A. \( A \) non è un insieme</li>
+            <li>B. Esistono \( x, y, z, t \in A \) (con \( x \neq y \)) tali che \( x \in z \) e \( y \in t \)</li>
+            <li>C. \( A \) ha quattro elementi</li>
+            <li>D. Esistono \( x, y, z \in A \) tali che \( x \in y \) e \( y \subseteq z \)</li>
+        </ol>
+        <h3>Soluzione</h3>
+        <p>
+            A. <b>Falso</b> <br>
+            B. <b>Vero</b> <br>
+            C. <b>Falso</b> <br>
+            D. <b>Vero</b>
+        </p>
+        <div class="explanation">
+            <p><b>Spiegazione:</b> L'insieme \( A \) contiene sette elementi distinti, quindi è un insieme valido. Abbiamo confermato l'esistenza di relazioni di appartenenza che soddisfano le condizioni dei punti B e D.</p>
+        </div>
+    </div>
+
+    <!-- Esercizio 2 -->
+    <div class="exercise">
+        <h2>Esercizio 2</h2>
+        <h3>Domanda</h3>
+        <p>Consideriamo l'insieme delle parti \( 2^T \) e \( 2^Q \) con \( T \) e \( Q \) rispettivamente l'insieme dei multipli di 3 e dei multipli di 4. Rispondi alle seguenti affermazioni:</p>
+        <ol>
+            <li>A. \( 2^T \subseteq 2^Q \)</li>
+            <li>B. \( 2^T \cap 2^Q \neq \emptyset \)</li>
+            <li>C. \( Q \) è numerabile</li>
+            <li>D. \( 2^Q \) è numerabile</li>
+        </ol>
+        <h3>Soluzione</h3>
+        <p>
+            A. <b>Falso</b> <br>
+            B. <b>Vero</b> <br>
+            C. <b>Vero</b> <br>
+            D. <b>Falso</b>
+        </p>
+        <div class="explanation">
+            <p><b>Spiegazione:</b> \( Q \) è numerabile poiché i multipli di 4 possono essere messi in corrispondenza biunivoca con \( \mathbb{N} \). Tuttavia, \( 2^Q \), essendo l'insieme delle parti di un insieme numerabile infinito, risulta non numerabile.</p>
+        </div>
+    </div>
+
+    <!-- Esercizio 3 -->
+    <div class="exercise">
+        <h2>Esercizio 3</h2>
+        <h3>Domanda</h3>
+        <p>Consideriamo la relazione \( A \times A \) su un insieme \( A \neq \emptyset \). Quali fra le seguenti affermazioni sono corrette?</p>
+        <ol>
+            <li>A. La relazione \( A \times A \) non è antisimmetrica</li>
+            <li>B. La relazione \( A \times A \) è una relazione di equivalenza</li>
+            <li>C. Ogni relazione di equivalenza che contenga una coppia \( (u, v) \) con \( u \neq v \) è riflessiva, simmetrica e transitiva</li>
+            <li>D. Per ogni relazione \( R \) su \( A \) esiste una relazione di equivalenza su \( A \) che contiene \( R \)</li>
+        </ol>
+        <h3>Soluzione</h3>
+        <p>
+            A. <b>Vero</b> <br>
+            B. <b>Vero</b> <br>
+            C. <b>Vero</b> <br>
+            D. <b>Vero</b>
+        </p>
+        <div class="explanation">
+            <p><b>Spiegazione:</b> La relazione \( A \times A \) è un esempio di relazione di equivalenza poiché è riflessiva, simmetrica e transitiva. Inoltre, ogni relazione \( R \) su \( A \) può essere estesa alla sua chiusura di equivalenza.</p>
+        </div>
+    </div>
+
+    <!-- Esercizio 4 -->
+    <div class="exercise">
+        <h2>Esercizio 4</h2>
+        <h3>Domanda</h3>
+        <p>Scrivi una relazione di equivalenza \( R \subseteq \{a, b, c, d\} \times \{a, b, c, d\} \) con due classi di equivalenza e indicane l'insieme quoziente.</p>
+        <h3>Soluzione</h3>
+        <p>
+            Una possibile relazione di equivalenza è: \( R = \{(a, a), (b, b), (a, b), (b, a), (c, c), (d, d), (c, d), (d, c)\} \).
+            <br> Insieme quoziente: \( \{[a], [c]\} \) con \( [a] = \{a, b\} \) e \( [c] = \{c, d\} \).
+        </p>
+        <div class="explanation">
+            <p><b>Spiegazione:</b> La relazione divide l'insieme in due classi di equivalenza \( \{a, b\} \) e \( \{c, d\} \), rispettando le proprietà di riflessività, simmetria e transitività.</p>
+        </div>
+    </div>
+
+    <!-- Esercizio 5 -->
+    <div class="exercise">
+        <h2>Esercizio 5</h2>
+        <h3>Dimostrazione per induzione</h3>
+        <p>Dimostra che \( \sum_{i=1}^n \frac{1}{i(i+1)} = 1 - \frac{1}{n+1} \) per ogni \( n \geq 1 \).</p>
+        <h3>Soluzione</h3>
+        <div class="solution">
+            <p>
+                <b>Base</b>: per \( n = 1 \), otteniamo \( \frac{1}{1 \cdot 2} = 1 - \frac{1}{2} \), che è vero.<br>
+                <b>Passo Induttivo</b>: supponiamo valga per \( n \), dimostriamolo per \( n+1 \):
+                \[
+                \sum_{i=1}^{n+1} \frac{1}{i(i+1)} = \left(1 - \frac{1}{n+1}\right) + \frac{1}{(n+1)(n+2)} = 1 - \frac{1}{n+2}
+                \]
+            </p>
+        </div>
+        <div class="explanation">
+            <p><b>Spiegazione:</b> La dimostrazione per induzione ci permette di dimostrare la validità dell'uguaglianza per qualsiasi \( n \geq 1 \) sfruttando la proprietà additiva della somma parziale.</p>
+        </div>
+    </div>
+
+    <!-- Esercizio 6 -->
+    <div class="exercise">
+        <h2>Esercizio 6</h2>
+        <h3>Domanda</h3>
+        <p>Definisci il concetto di soddisfacibilità nella logica proposizionale.</p>
+        <h3>Soluzione</h3>
+        <p>Una formula è soddisfacibile se esiste almeno un'interpretazione in cui la formula risulta vera.</p>
+        <div class="explanation">
+            <p><b>Spiegazione:</b> La soddisfacibilità implica che sia possibile trovare un modello, ovvero un'interpretazione, per cui la formula logica risulta vera.</p>
+        </div>
+    </div>
+
+    <!-- Esercizio 7 -->
+    <div class="exercise">
+        <h2>Esercizio 7</h2>
+        <h3>Domanda</h3>
+        <p>Determinare se le seguenti formule sono tautologie (T), soddisfacibili (S), falsificabili (F) o insoddisfacibili (I):</p>
+        <ol>
+            <li>¬¬A ∧ A</li>
+            <li>¬A ∨ ¬¬A</li>
+            <li>¬(A ∨ B) ↔ (A ∧ ¬B)</li>
+            <li>(A → B) ↔ (¬B → ¬A)</li>
+            <li>(A ∧ ¬A) → B</li>
+        </ol>
+        <h3>Soluzione</h3>
+        <p>
+            1. T <br>
+            2. T <br>
+            3. F <br>
+            4. T <br>
+            5. T
+        </p>
+        <div class="explanation">
+            <p><b>Spiegazione:</b> Le risposte sono state determinate applicando le regole di verità della logica proposizionale.</p>
+        </div>
+    </div>
+
+    <!-- Esercizio 8 -->
+    <div class="exercise">
+        <h2>Esercizio 8</h2>
+        <h3>Domanda</h3>
+        <p>Trovare un’interpretazione che verifichi e una che falsifichi la formula \((\exists yP(y) \land \exists zQ(z)) \rightarrow \exists x(P(x) \land Q(x))\).</p>
+        <h3>Soluzione</h3>
+        <p>Interpretazione che verifica: esistono \( y \) e \( z \) per cui \( P(y) \) e \( Q(z) \) sono veri per lo stesso valore. <br> Interpretazione che falsifica: esistono \( y \) e \( z \) tali che \( P(y) \) e \( Q(z) \) sono veri ma non esiste un \( x \) tale che entrambi siano veri per \( P(x) \land Q(x) \).</p>
+    </div>
+
+    <!-- Esercizio 9 -->
+    <div class="exercise">
+        <h2>Esercizio 9</h2>
+        <h3>Domanda</h3>
+        <p>Formalizzare le seguenti proposizioni con enunciati nel linguaggio predicativo \(L\) composto da un simbolo \(R\) di relazione a due argomenti e dal simbolo di identità \(=\).</p>
+        <ol>
+            <li>A. \( R \) è una relazione di ordine totale.</li>
+            <li>B. \( R \) non è una relazione simmetrica.</li>
+            <li>C. \( R \) non ammette minimo.</li>
+        </ol>
+        <h3>Soluzione</h3>
+        <p>
+            A. \( \forall x, y (R(x, y) \lor R(y, x)) \) <br>
+            B. \( \exists x, y (R(x, y) \land \neg R(y, x)) \) <br>
+            C. \( \forall x \exists y (y \neq x \land R(y, x)) \)
+        </p>
+        <div class="explanation">
+            <p><b>Spiegazione:</b> Gli enunciati formalizzano le proprietà di ordine totale, asimmetria e assenza di minimo rispettando le regole della logica predicativa.</p>
+        </div>
+    </div>
+
+</body>
+</html>

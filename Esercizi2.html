@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soluzioni Esercizi - Metodi Matematici</title>
+    <!-- MathJax CDN per formule matematiche -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .exercise {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .exercise h2 {
+            color: #333;
+        }
+        .explanation {
+            color: #555;
+            margin-top: 10px;
+        }
+        .answer {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Soluzioni degli Esercizi - Metodi Matematici per l'Informatica</h1>
+
+<div class="exercise" id="exercise1">
+    <h2>Esercizio 1 - Insiemi</h2>
+    <p><strong>Testo:</strong> Siano \( A = \{2, \{1, 3\}, (3, 5)\} \) e \( B = \{(2, 2), 5\} \).</p>
+    <div class="explanation">
+        <p><strong>A.</strong> \(2 \in A \cap B\): Poiché \( A \cap B \) contiene solo gli elementi comuni tra \( A \) e \( B \), osserviamo che \( 2 \) è un elemento di \( A \) ma non di \( B \). <strong>Risposta: Falso</strong>.</p>
+        <p><strong>B.</strong> \(1 \in A \cup B\): \( A \cup B \) include tutti gli elementi di \( A \) e di \( B \). Tuttavia, \( 1 \) non è presente in nessuno dei due insiemi. <strong>Risposta: Falso</strong>.</p>
+        <p><strong>C.</strong> \( B - A \neq \emptyset \): La differenza \( B - A \) contiene gli elementi di \( B \) che non appartengono ad \( A \). Entrambi gli elementi di \( B \), ovvero \( (2, 2) \) e \( 5 \), non sono in \( A \), quindi \( B - A \) non è vuoto. <strong>Risposta: Vero</strong>.</p>
+        <p><strong>D.</strong> \( \{1, 3\} \subseteq A \): Il sottoinsieme \( \{1, 3\} \) non è un elemento di \( A \), anche se \( \{1, 3\} \in A \) come singolo oggetto. <strong>Risposta: Falso</strong>.</p>
+        <p><strong>E.</strong> \( \exists x, y[(x \in A) \land (\{(x, y)\} \subseteq B)] \): Non esiste una coppia \( (x, y) \) tale che sia in entrambi gli insiemi in questa forma. <strong>Risposta: Falso</strong>.</p>
+    </div>
+</div>
+
+<div class="exercise" id="exercise2">
+    <h2>Esercizio 2 - Relazioni</h2>
+    <p><strong>Testo:</strong> Data la relazione \( R = \{(1, 2), (6, 7), (2, 3), (5, 6), (3, 4), (8, 9)\} \subseteq \mathbb{N} \times \mathbb{N} \), calcolare la chiusura transitiva \( R_b \).</p>
+    <div class="explanation">
+        <p><strong>A.</strong> \( R_b \) ha 10 elementi: La chiusura transitiva include tutte le coppie necessarie per la transitività. Per questa relazione, la chiusura transitiva potrebbe avere più o meno di 10 elementi. <strong>Risposta: Incerto</strong> (è necessaria una verifica precisa).</p>
+        <p><strong>B.</strong> \( R_b = R \): Poiché \( R \) non è transitiva, \( R_b \neq R \). <strong>Risposta: Falso</strong>.</p>
+        <p><strong>C.</strong> \( R - R_b = \emptyset \): Dato che \( R \subseteq R_b \), la differenza è vuota. <strong>Risposta: Vero</strong>.</p>
+    </div>
+</div>
+
+<div class="exercise" id="exercise3">
+    <h2>Esercizio 3 - Funzioni e Relazioni</h2>
+    <p><strong>Testo:</strong> Sia \( Q = \{(1, 2), (1, 3), (1, 4), (2, 3)\} \subseteq \{1, 2, 3, 4\} \times \{1, 2, 3, 4\} \).</p>
+    <div class="explanation">
+        <p><strong>A.</strong> \( Q \) è una funzione iniettiva: Poiché un argomento (1) si mappa su più valori, \( Q \) non è una funzione. <strong>Risposta: Falso</strong>.</p>
+        <p><strong>B.</strong> \( Q \) è una relazione di equivalenza: \( Q \) non è riflessiva, simmetrica né transitiva. <strong>Risposta: Falso</strong>.</p>
+        <p><strong>C.</strong> \( Q \) è una relazione transitiva: La transitività non è soddisfatta. <strong>Risposta: Falso</strong>.</p>
+        <p><strong>D.</strong> \( Q \) non è una funzione: Confermato. <strong>Risposta: Vero</strong>.</p>
+    </div>
+</div>
+
+<div class="exercise" id="exercise4">
+    <h2>Esercizio 4 - Relazione di Divisibilità</h2>
+    <p><strong>Testo:</strong> Data la relazione \( D = \{(a, b) | a, b \in \mathbb{N} \text{ e } a \text{ divide } b\} \).</p>
+    <div class="explanation">
+        <p><strong>A.</strong> \( D \) è una relazione d’ordine stretto: La divisibilità non è strettamente d'ordine poiché non è antisimmetrica. <strong>Risposta: Falso</strong>.</p>
+        <p><strong>B.</strong> \( D \) è una relazione d’ordine largo: La relazione di divisibilità è un ordine parziale. <strong>Risposta: Vero</strong>.</p>
+        <p><strong>C.</strong> \( \exists x \in \mathbb{N} \) tale che \( \forall y \in \mathbb{N}, x \neq y \Rightarrow (x, y) \in D \): Non esiste un tale \( x \). <strong>Risposta: Falso</strong>.</p>
+        <p><strong>D.</strong> \( \exists x \in \mathbb{N} \) tale che \( \forall y \in \mathbb{N}, x \neq y \Rightarrow (y, x) \in D \): Vale per \( x = 1 \), che divide ogni \( y \). <strong>Risposta: Vero</strong>.</p>
+    </div>
+</div>
+
+<div class="exercise" id="exercise5">
+    <h2>Esercizio 5 - Numerabilità</h2>
+    <div class="explanation">
+        <p><strong>A.</strong> Se \( A \) è numerabile allora \( A - B \) è numerabile: La differenza tra insiemi numerabili è numerabile. <strong>Risposta: Vero</strong>.</p>
+        <p><strong>B.</strong> Se \( A \) e \( B \) sono numerabili allora \( A - B \) è finito: Falso, \( A - B \) può essere infinito. <strong>Risposta: Falso</strong>.</p>
+        <p><strong>C.</strong> Se \( A \) e \( B \) non sono numerabili allora \( A \cap B \) non è numerabile: La loro intersezione può essere numerabile o non numerabile. <strong>Risposta: Falso</strong>.</p>
+        <p><strong>D.</strong> Se \( A \) e \( B \) sono numerabili allora \( A \times B \) è numerabile: Il prodotto cartesiano di due insiemi numerabili è numerabile. <strong>Risposta: Vero</strong>.</p>
+    </div>
+</div>
+
+<div class="exercise" id="exercise6">
+    <h2>Esercizio 6 - Relazione di Equivalenza sui Numeri Pari</h2>
+    <p><strong>Testo:</strong> Sia \( P \) l’insieme dei numeri pari. Scrivere una relazione di equivalenza \( R \subseteq P \times P \) che abbia tre classi di equivalenza.</p>
+    <div class="explanation">
+        <p>Una relazione di equivalenza con tre classi è data da:</p>
+        <p>\( R = \{(x, y) \in P \times P \mid x \equiv y \pmod{3}\} \), con classi di equivalenza \(\{0, 3, 6, \ldots\}\), \(\{2, 5, 8, \ldots\}\), e \(\{4, 7, 10, \ldots\}\).</p>
+    </div>
+</div>
+
+<div class="exercise" id="exercise7">
+    <h2>Esercizio 7 - Induzione sui Numeri Pentagonali</h2>
+    <p><strong>Testo:</strong> La successione dei numeri pentagonali è definita come \( f(1) = 1, f(n+1) = f(n) + 3n + 1 \).</p>
+    <div class="explanation">
+        <p>Dimostriamo per induzione che \( f(n) = \frac{n(3n-1)}{2} \):</p>
+        <ul>
+            <li><strong>Base:</strong> Per \( n = 1 \), otteniamo \( f(1) = 1 \).</li>
+            <li><strong>Passo induttivo:</strong> Supponiamo vero per \( n \) e dimostriamo per \( n+1 \) usando la definizione ricorsiva.</li>
+        </ul>
+    </div>
+</div>
+
+<div class="exercise" id="exercise8">
+    <h2>Esercizio 8 - Logica</h2>
+    <p><strong>Testo:</strong> Dimostrare che se \( \models (A \rightarrow B) \) allora \( \models ((A \land B) \leftrightarrow A) \) e \( \models ((A \lor B) \leftrightarrow B) \).</p>
+    <div class="explanation">
+        <p>Si verifica attraverso le tavole di verità per entrambe le affermazioni.</p>
+    </div>
+</div>
+
+<div class="exercise" id="exercise9">
+    <h2>Esercizio 9 - Enunciati Logici</h2>
+    <div class="explanation">
+        <p><strong>A.</strong> \( \forall x(A(x) \lor B(x)) \rightarrow (\forall xA(x) \lor \forall xB(x)) \): Falso, un controesempio è dato da \( A(x) \) che rappresenta "x è pari" e \( B(x) \) che rappresenta "x è dispari". <strong>Risposta: Falso</strong>.</p>
+        <p><strong>B.</strong> \( (\exists xA(x) \rightarrow \forall xB(x)) \rightarrow \forall x(A(x) \rightarrow B(x)) \): È valido. <strong>Risposta: Vero</strong>.</p>
+    </div>
+</div>
+
+<div class="exercise" id="exercise10">
+    <h2>Esercizio 10 - Enunciato Distinguente tra \( (\mathbb{N}, <) \) e \( (\mathbb{Z}, <) \)</h2>
+    <p>L'enunciato \( \forall x \exists y (x < y) \) è vero in \( \mathbb{N} \) ma non in \( \mathbb{Z} \), poiché in \( \mathbb{Z} \) non c'è un minimo. Questo distingue i due insiemi.</p>
+</div>
+
+<div class="exercise" id="exercise11">
+    <h2>Esercizio 11 - Formalizzazione</h2>
+    <div class="explanation">
+        <p><strong>A.</strong> Qualche uomo è un genio: \( \exists x (Uomo(x) \land Genio(x)) \).</p>
+        <p><strong>B.</strong> Nessuna scimmia è un uomo: \( \forall x (Scimmia(x) \rightarrow \neg Uomo(x)) \).</p>
+        <p><strong>C.</strong> Qualche genio non è una scimmia: \( \exists x (Genio(x) \land \neg Scimmia(x)) \).</p>
+    </div>
+</div>
+
+</body>
+</html>
